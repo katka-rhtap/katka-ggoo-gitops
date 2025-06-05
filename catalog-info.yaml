@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: katka-ggoo-gitops
+  description: This is GitOps manifest for katka-ggoo   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=katka-ggoo
+    backstage.io/kubernetes-id: katka-ggoo 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: katka-ggoo-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:katka-ggoo
