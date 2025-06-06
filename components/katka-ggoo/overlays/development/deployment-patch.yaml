@@ -12,5 +12,5 @@ spec:
   template:
     spec:
       containers:
-        - image: quay.io/kkanova0/go:jenkins-4024c002b1c9e8afdeb528f5220d8c06a4fb9872
+        - image: quay.io/kkanova0/go:jenkins-fb977f8c7321f1b3d3e7fc51b49878fbe01d79c8
           name: container-image
